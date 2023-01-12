@@ -1,12 +1,21 @@
-$bg-red: white;
+$bg-white: white;
 @font-face {
-    font-family: Popins;
-    src: url(poppins-v20-latin-regular.ttf);
+    font-family: Poppins-Regular;
+    src: url(Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(Poppins-Bold.ttf)
+}
+
+
+html, body {
+    overflow-x:hidden 
 }
 
 * {
     margin: 0;
-    font-family: Popins;
+    font-family: Poppins-Regular;
     a {
         text-decoration: none;
         color: #4F5361;
@@ -35,7 +44,7 @@ $bg-red: white;
 }
 
 body {
-    background: $bg-red;
+    background: $bg-white;
 }
 
 .border-box {
@@ -47,21 +56,17 @@ header {
     background: #E6F0FF;
 
     #header {
-        position: relative;
-        top: 38px;
-        height: 736px;
-
         nav {
+            padding-top: 38px;
             display: flex;
             height: 40px;
             justify-content: space-between;
 
             #left-nav {
-                width: 50%;
+                width: 45%;
                 display: flex;
                 justify-content: space-between;
-                align-content: center;
-                flex-wrap: wrap;
+                align-items: center;
 
                 ul {
                     display: flex;
@@ -82,9 +87,14 @@ header {
             #right-nav {
                 width: 30%;
                 display: flex;
-                justify-content: space-evenly;
                 align-items: center;
-
+                justify-content: flex-end;
+                p {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 21px;
+                    padding-right: 18px;
+                }
                 .register-btn {
                     width: 98px;
                     height: 40px;
@@ -100,12 +110,14 @@ header {
             align-items: center;
 
             #header-content {
-                // width: 75%;
                 h1 {
                     font-size: 64px;
+                    font-weight: 700;
+                    font-family: Poppins-Bold;
+                    line-height: 76px;
                     padding-top: 8px;
                     padding-bottom: 30px;
-                    line-height: 76px;
+                    color: #000336;
                 }
                 h4 {
                     font-weight: 500;
@@ -113,15 +125,13 @@ header {
                     line-height: 27px;
                     letter-spacing: 0.01em;
                     color: #687691;
+                }
+                .desc {
                     padding-bottom: 40px;
                 }
             }
 
             #house {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
                 img {
                     width: 584px;
                     height: 619px;
@@ -140,12 +150,28 @@ header {
         display: flex;
         justify-content: space-between;
         padding-top: 122px;
+        #content {
+            p {
+                padding-top: 23px;
+            } 
+        }
+        #review {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-end; 
+            p {
+                padding-top: 14px;
+            }       
+        }
     }
     #logos {
         display: flex;
         justify-content: space-between;
         height: 91px;
         align-items: center;
+        padding-top: 70px;
     }
 }
 #how-it-works #box {
@@ -261,19 +287,25 @@ header {
                 width: 350px;
                 height: 227px;
             }
-            .card-icons {
+            #card-icons {
                 display: flex;
                 justify-content: space-evenly;
                 padding-bottom: 20px;
-                p {
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 14px;
-                    color: #444444;
-                }
-                img {
-                    width: 18px;
-                    height: 18px;
+                .group {
+                    display: flex;
+                    align-items: center;
+                    p {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #444444;
+                        padding-left: 8px;
+                        padding-bottom: 0px;
+                    }
+                    img {
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
             }
         }
@@ -330,14 +362,20 @@ header {
             }
         }
         #text-feature {
-            display: flex;    
+            display: flex;
             justify-content: center;
             flex-direction: column;
+            width: 50%;
+            align-items: flex-start;
+            align-content: center;
+            flex-wrap: wrap;
             h1 {
                 font-size: 35px;
                 line-height: 45px;
                 font-weight: 600;
                 color: #000339;
+                padding-bottom: 20px;
+                padding-top: 10px;
             }
         }
     }
@@ -364,6 +402,8 @@ header {
 }
 
 #news-box {
+    display: block;
+    max-block-size: 470px;
     #rectangle {
         height: 370px;
         background: #063183;
@@ -395,7 +435,7 @@ header {
     }
     #mask {
         position: relative;
-        left: 760px;
+        left: 600px;
         bottom: 410px;
         img {
             height: 410px;
@@ -428,7 +468,7 @@ header {
             }
             #socials img {
                 padding-right: 16px;
-                padding-top: 40px;
+                padding-top: 22px;
             }
         }
     }

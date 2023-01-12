@@ -2,12 +2,20 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
   \*********************************************************************************************************/
 @font-face {
-  font-family: Popins;
-  src: url(../80946c0880373b223d9c.ttf);
+  font-family: Poppins-Regular;
+  src: url(../35d26b781dc5fda684cc.ttf);
 }
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(../cdb29a5d7ccf57ff05a3.ttf);
+}
+html, body {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
-  font-family: Popins;
+  font-family: Poppins-Regular;
 }
 * a {
   text-decoration: none;
@@ -47,22 +55,17 @@ body {
 header {
   background: #E6F0FF;
 }
-header #header {
-  position: relative;
-  top: 38px;
-  height: 736px;
-}
 header #header nav {
+  padding-top: 38px;
   display: flex;
   height: 40px;
   justify-content: space-between;
 }
 header #header nav #left-nav {
-  width: 50%;
+  width: 45%;
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 header #header nav #left-nav ul {
   display: flex;
@@ -80,8 +83,14 @@ header #header nav #left-nav ul li {
 header #header nav #right-nav {
   width: 30%;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: flex-end;
+}
+header #header nav #right-nav p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  padding-right: 18px;
 }
 header #header nav #right-nav .register-btn {
   width: 98px;
@@ -95,9 +104,12 @@ header #header #header-bottom {
 }
 header #header #header-bottom #header-content h1 {
   font-size: 64px;
+  font-weight: 700;
+  font-family: Poppins-Bold;
+  line-height: 76px;
   padding-top: 8px;
   padding-bottom: 30px;
-  line-height: 76px;
+  color: #000336;
 }
 header #header #header-bottom #header-content h4 {
   font-weight: 500;
@@ -105,12 +117,9 @@ header #header #header-bottom #header-content h4 {
   line-height: 27px;
   letter-spacing: 0.01em;
   color: #687691;
-  padding-bottom: 40px;
 }
-header #header #header-bottom #house {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header #header #header-bottom #header-content .desc {
+  padding-bottom: 40px;
 }
 header #header #header-bottom #house img {
   width: 584px;
@@ -129,11 +138,25 @@ header #header #header-bottom #house img {
   justify-content: space-between;
   padding-top: 122px;
 }
+#clients-logo #clients-top #content p {
+  padding-top: 23px;
+}
+#clients-logo #clients-top #review {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+#clients-logo #clients-top #review p {
+  padding-top: 14px;
+}
 #clients-logo #logos {
   display: flex;
   justify-content: space-between;
   height: 91px;
   align-items: center;
+  padding-top: 70px;
 }
 
 #how-it-works #box {
@@ -252,18 +275,24 @@ header #header #header-bottom #house img {
   width: 350px;
   height: 227px;
 }
-#feature-01 #cards .card .card-icons {
+#feature-01 #cards .card #card-icons {
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 20px;
 }
-#feature-01 #cards .card .card-icons p {
+#feature-01 #cards .card #card-icons .group {
+  display: flex;
+  align-items: center;
+}
+#feature-01 #cards .card #card-icons .group p {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
+  padding-left: 8px;
+  padding-bottom: 0px;
 }
-#feature-01 #cards .card .card-icons img {
+#feature-01 #cards .card #card-icons .group img {
   width: 18px;
   height: 18px;
 }
@@ -320,12 +349,18 @@ header #header #header-bottom #house img {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
 }
 #feature-02 #feature-top #text-feature h1 {
   font-size: 35px;
   line-height: 45px;
   font-weight: 600;
   color: #000339;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 #feature-02 #countdown {
   display: flex;
@@ -346,6 +381,10 @@ header #header #header-bottom #house img {
   color: #7B8087;
 }
 
+#news-box {
+  display: block;
+  max-block-size: 470px;
+}
 #news-box #rectangle {
   height: 370px;
   background: #063183;
@@ -377,7 +416,7 @@ header #header #header-bottom #house img {
 }
 #news-box #mask {
   position: relative;
-  left: 760px;
+  left: 600px;
   bottom: 410px;
 }
 #news-box #mask img {
@@ -410,7 +449,7 @@ header #header #header-bottom #house img {
 }
 #footer #footer-top .footer-menu #socials img {
   padding-right: 16px;
-  padding-top: 40px;
+  padding-top: 22px;
 }
 #footer #footer-bottom {
   display: flex;
