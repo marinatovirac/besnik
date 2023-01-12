@@ -131,10 +131,10 @@ header {
                 }
             }
 
-            #house {
+            #light-house {
+                display: flex;
                 img {
-                    width: 584px;
-                    height: 619px;
+                    height: 550px;
                 }
             }
         }
@@ -357,7 +357,6 @@ header {
                 }
             }
             #house {
-                width: 400px;
                 height: 460px;
             }
         }

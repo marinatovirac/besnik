@@ -121,9 +121,11 @@ header #header #header-bottom #header-content h4 {
 header #header #header-bottom #header-content .desc {
   padding-bottom: 40px;
 }
-header #header #header-bottom #house img {
-  width: 584px;
-  height: 619px;
+header #header #header-bottom #light-house {
+  display: flex;
+}
+header #header #header-bottom #light-house img {
+  height: 550px;
 }
 
 #clients-logo {
@@ -342,7 +344,6 @@ header #header #header-bottom #house img {
   margin-bottom: 10px;
 }
 #feature-02 #feature-top #image-and-card #house {
-  width: 400px;
   height: 460px;
 }
 #feature-02 #feature-top #text-feature {
