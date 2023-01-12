@@ -48,8 +48,8 @@ body {
 }
 
 .border-box {
-  padding-left: 165px;
-  padding-right: 165px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
